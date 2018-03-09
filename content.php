@@ -1,4 +1,5 @@
 <h5>Sie befinden sich hier: > Home</h5>
+<?php custom_breadcrumbs2(); ?>
 
 <h1><?php the_title(); ?></h1>
 

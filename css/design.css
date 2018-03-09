@@ -341,7 +341,38 @@ li.current_page_item ul.sub-menu li,
 }
 
 
+/* Style the list */
+ul#main-breadcrumb {
+    padding: 10px 16px!important;
+    list-style: none!important;
+    background-color: #eee!important;
+    width: 100%!important;
+}
 
+/* Display list items side by side */
+ul#main-breadcrumb li {
+    display: inline!important;
+    font-size: 18px!important;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul#main-breadcrumb li+li:before {
+    padding: 8px!important;
+    color: black!important;
+    content: "/\00a0"!important;
+}
+
+/* Add a color to all links inside the list */
+ul#main-breadcrumb li a {
+    color: #0275d8!important;
+    text-decoration: none!important;
+}
+
+/* Add a color on mouse-over */
+ul#main-breadcrumb li a:hover {
+    color: #01447e!important;
+    text-decoration: underline!important;
+}
 
 
 
