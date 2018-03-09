@@ -295,3 +295,54 @@ h2 {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-weight: bold;
 }
+
+ul.sub-menu li {
+	margin-left:30px;
+	display: none;
+}	
+
+
+/* CSS Adjustments */
+ 
+li.current_page_item ul.sub-menu li,
+.current_page_item ~ li, 
+.current-menu-item ~ li,
+.current_page_item,
+.current-menu-item {
+	display: block!important;
+}
+
+.current-page-ancestor ul.sub-menu li, 
+.current-menu-ancestor ul.sub-menu li, 
+.current-menu-parent ul.sub-menu li,
+.current-page-parent ul.sub-menu li {
+	display: block!important;	
+} 
+
+#innerespalte img {
+	max-width: 100%;
+	height: auto;
+}
+
+#social-media-bar {
+	width: 100%;
+	text-align: right;
+	font-size: 1.25em;
+}
+
+#social-media-bar a {
+	background-color: transparent;
+	margin-left: 1em;
+}
+
+#social-media-bar a {
+	background-color: transparent;
+	margin-left: 1em;
+}
+
+
+
+
+
+
+

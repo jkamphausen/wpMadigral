@@ -2,16 +2,25 @@
 
 <h1><?php the_title(); ?></h1>
 
-<a  class="title-image-link" 
-    href="<?php the_post_thumbnail_url(); ?>" 
-    data-lightbox="title-image"
-    data-title="My caption">
-    <img    class="title-image" 
-            src="<?php the_post_thumbnail_url(); ?>" 
-            alt="title-image" 
-            width="100%"/>
-</a>   
+<?php insert_featured_image_if_set() ?>
 
 <?php the_content(); ?>
 
 <p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+
+
+<?php
+/*
+wp_nav_menu( array(
+    'menu' => 'primary-menu'
+    ,'container' => 'nav'
+    ,'container_class' => 'subpages'
+    ,'depth' => 1
+    ,'walker' => new SH_Child_Only_Walker()
+ ));
+
+wp_nav_menu( array( 
+    'theme_location' => 'primary-menu', 
+    'container_class' => 'custom-menu-class' ) ); 
+*/
+?>
