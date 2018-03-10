@@ -14,9 +14,9 @@
         <?php wp_head();?>
     </head>
     <body >
-        <div id="rahmen">
-            <div id="kopf">
+        <div id="frame">
+            <div id="header">
                 <!--<a href="<?php echo get_bloginfo( 'wpurl' );?>">-->
-                <div id="kopfinnen">  
+                <div id="innerHeader">  
                 </div> 
 			</div>

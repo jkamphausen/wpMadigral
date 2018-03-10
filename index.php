@@ -1,7 +1,9 @@
 <?php get_header(); ?>  
 <?php get_sidebar(); ?>         
-    <div id="mittlerespalte">
-        <div id="innerespalte">
+    <div id="center">
+        <div id="innerCenter">
+          <!-- <h5>Sie befinden sich hier: <?php custom_breadcrumbs(); ?></h5> -->
+
           <?php //get_template_part( 'content', get_post_format() ); ?>
 
           <?php 

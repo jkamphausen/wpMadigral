@@ -1,122 +1,444 @@
+/* 
+ *	Contents 
+ * 	Author: 	Julian Kamphausen
+ *  Based on: Eva Joesting
+ *
+ *	01  General CSS
+ *	02	Mobile CSS
+ *	03	Desktop CSS
+ */
+
+
+/* 01	General CSS 	*/
+
 body {
-	background-color: #535353;
+	background-color: 				#535353;
+	font-family: 							Verdana, Arial, Helvetica, sans-serif;
 }
 
-#rahmen {
-	width:960px;
-	margin-left:auto;
-	margin-right:auto;
-	border:1px solid #666666;
-	background-color: #EF8846;
-	height:auto;
+a:link,
+a:visited {
+	background-color:					#999999; 
+	color:										#FFFFFF;
 }
 
-/*---------Kopf--------------------*/
-#kopf{
-	width:100%;
-	background-image:url(../img/logo.gif);
-	background-color:#FFFFFF;
-	height:150px;
-	background-repeat: no-repeat;
-	background-position: right center;
+a:hover,
+a:focus {
+	background-color: 				#EF8846; 
+	color:										#FFFFFF;
 }
 
-/*---------Kopf innen--------------------*/
-#kopfinnen {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center top;
-	padding:20px;
-	float: left;
-	background-color: #FFFFFF;
+a:active {
+	background-color: 				#666666; 
+	color:										#FFFFFF;
 }
 
-/*---------Menü oben--------------------*/
-
-#menuleiste{
-	width:100%;
-	height: 80px;
-	background-color:#CCCCCC;
+h1 {
+	font-size: 								17px;
+	font-weight: 							bold;
+	padding: 									0px 0px 15px;
 }
 
-/*---------Menu innen--------------------*/
-#menuinnen {
-	padding:20px;
-	float: right;
-	background-color: #CCCCCC;
+h2 {
+	font-size: 								17px;
+	font-weight: 							bold;
 }
 
-/*---------Navigation Menu rechts--------------------*/   
-#menuinnen ul {
-	width: 360px;
-	float: right;
-	background-color:#CCCCCC;
-	font:14px Verdana;
-	height:34px; /* ohne height verschwindet UL im float-Nirwana der LIs*/
-	margin:0; /* entfernt die Listen-typische Einrückung beim IE */
-	padding:0; /* entfernt die Listen-typische Einrückung beim Firefox */
+h4{
+	font-size:								11px;
 }
 
-#menuinnen li {
-	/*  */float:left;
-	list-style-type:none;
-	margin-right:10px;
-	padding-bottom:-1px;
-	width:100px;
-	height:34px;
+h5 {
+	font-size: 								9px;
+	font-style: 							normal;
+	color: 										#666666;
 }
 
-p {
-}
-
-a {
-}
-
-a:link {background-color:#CCFF66; color:#666600}
-a:visited {background-color: #CCFF99; color:#666600}
-a:focus {background-color: #FF3366; color:#FFFFFF}
-a:hover {background-color: #FFCC66; color:#990000}
-a:active {background-color: #FF3366; color:#FFFFFF}
-
-
-/*---------linke Spalte--------------------*/
-#linkespalte {
-	width:200px;
-	float:left;
-	background-color:#666666;
-}
-
-/*---------links innen--------------------*/
-#linksinnen {
-	background-color: #EF8846;
-	padding-top:30px;
-	padding-left: 25px;
-	padding-bottom:20px;
-}
-
-/*---------menuleiste links--------------------*/   
 ul {
-	/*width: 150px;*/
-	background-color:#EF8846;
-	font:14px Verdana;
-	/* height:200px; ohne height verschwindet UL im float-Nirwana der LIs*/
-	margin:0; /* entfernt die Listen-typische Einrückung beim IE */
-	padding:0; /* entfernt die Listen-typische Einrückung beim Firefox */
+	font-size: 								14px;
+	margin:										0; 		/* entfernt die Listen-typische Einrückung beim IE */
+	padding:									0; 		/* entfernt die Listen-typische Einrückung beim Firefox */
+}
+
+ul.menu a {
+	padding:									.25em .25em .25em .25em;
+	display:									block;
+	height:										2em;
+	text-align:								left;
+	text-decoration:					none;
+	font-weight: 							bold;
 }
 	
-li {
-	list-style-type:none;
-	padding-bottom:-1px;
-	width:130px;
-	margin-top:3px;
-	margin-bottom:5px;
+ul.menu li {
+	list-style-type:					none;
+	width:										100%;
+	margin-top:								.5em;
+	margin-bottom:						.5em;
 }
 
-/*---------untermenu eins - chor--------------------*/  
-#untermenueins {
-
+li.current_page_item > a:first-child {
+	background-color:					#535353;
 }
 
+li.current_page_item ul.sub-menu li,
+.current_page_item ~ li, 
+.current-menu-item ~ li,
+.current_page_item,
+.current-menu-item {
+	display: 									block!important;
+}
+
+.current-page-ancestor ul.sub-menu li, 
+.current-menu-ancestor ul.sub-menu li, 
+.current-menu-parent ul.sub-menu li,
+.current-page-parent ul.sub-menu li {
+	display: 									block!important;	
+} 
+
+/* Style the list */
+ul#main-breadcrumb {
+    list-style: 						none;
+    display: 								inline;
+    font-size: 							inherit;
+}
+
+/* Display list items side by side */
+ul#main-breadcrumb li {
+    display: 								inline;
+}
+
+ul#main-breadcrumb li+li:before {
+		padding-left: 					.5em;
+    content: 								"/\00a0";
+}
+
+ul#main-breadcrumb li a {
+    text-decoration: 				none;
+}
+
+ul#main-breadcrumb li a:hover {
+    text-decoration: 				underline;
+}
+
+/* 02	Mobile CSS 		*/
+/*@media only screen and (max-width: 960px) {  }*/
+#frame {
+	background-color: 				#EF8846;
+	width:										100%;
+	margin: 									0;
+	padding: 									0;
+	height:										auto;
+	border:										none;
+}   
+
+#header {
+	background-color:					#FFFFFF;
+	width:										100%;
+	background-image:					url(../img/logo.gif);
+	min-height: 							75px;
+	max-height: 							150px;
+	height:										auto;
+	background-repeat: 				no-repeat;
+	background-position: 			right center;
+	background-size: 					100% auto;
+}
+
+/* UNUSED
+#innerHeader {
+	background-attachment: 		fixed;
+	background-repeat: 				no-repeat;
+	background-position: 			center top;
+	padding:									20px;
+	float: 										left;
+}
+*/
+
+/*
+#menubar {
+	width:										100%;
+	background-color:					#CCCCCC;
+}
+
+#innerMenubar {
+	padding:									.5em;
+}
+
+#innerMenubar ul {
+	width: 										100%;
+	height: 									auto;
+	list-style: 							none;
+  display: 									inline;
+	width: 										100%;
+	font-size: 								14px;
+	height:										34px; 
+	margin:										0; 		
+	padding:									0; 		
+	background-color:					#CCCCCC;
+}
+
+#innerMenubar li {
+	float: left;
+}
+*/
+
+#toggleMobile {
+	color: 										white;
+	text-align: 							center;
+	font-size: 								2em;
+}
+
+input[type=checkbox]:checked ~ label ~ #menu-container { 
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+#toggleMobile label {
+	font-family: 							FontAwesome;
+	display: block;
+	padding: .5em;
+}
+
+#toggleMobile input[type='checkbox'] + label:before {
+    content: '\f00d';
+}
+#toggleMobile input[type='checkbox']:checked + label:before {
+    content: '\f0c9';
+}
+#toggleMobile input[type='checkbox'] {
+    display:none;
+}
+
+/*
+
+input.faChkSqr {
+  visibility: hidden;
+  background-color: 		#EF8846;
+}
+
+input.faChkSqr:checked:after, input.faChkSqr:after {
+  visibility: visible;
+  font-family: FontAwesome;
+  font-size:25px;height: 17px; width: 17px;
+  position: relative;
+  top: -.5em;
+  left: -.2em;
+  background-color:#FFF;
+  display: inline-block;
+}
+
+input.faChkSqr:checked:after {
+  content: '\f00d';
+}
+
+input.faChkSqr:after {
+  content: '\f0c9';
+}
+
+input#menuToggleBox:checked:after {
+  content: '\f00d';
+}
+
+input#menuToggleBox:after {
+  content: '\f0c9';
+}
+
+*/
+#menubar {
+	width:										100%;
+	background-color:					#CCCCCC;
+}
+
+#sidebar {
+	width:										100%;
+	float:										left;
+}
+
+#innerSidebar,
+#innerMenubar {
+	padding: 									.5em;
+}
+
+#center {
+	width:										100%;
+	float:										right;
+	background-color:					white;
+}
+
+#innerCenter  {
+ 	padding:									1em;
+	font-size: 								14px;
+	line-height: 							18px;
+	font-weight: 							bold;
+	color: 										#666666;
+	text-align: 							left;
+}
+
+#innerCenter img {
+	max-width: 								100%;
+	height: 									auto;
+}
+
+#footer {
+  clear:										both;
+  width:										100%;
+}
+
+#innerFooter {
+	padding:									20px;
+}
+
+#innerCenter a {
+	text-decoration: 					underline;
+	background-color: 				#FFFFFF;
+	text-align: 							left;	
+}
+
+#innerCenter a:link {
+	color: 										#000099;
+}
+
+#innerCenter a:visited,
+#innerCenter a:focus,
+#innerCenter a:hover,
+#innerCenter a:active {
+	color: 										#000066;
+}
+
+ul.sub-menu li {
+	margin-left:							0px;
+	display: 									none;
+}	
+
+ul.sub-menu li a {
+		padding-left:						30px;
+}	
+
+#footer a {
+	background-color: 				transparent;
+}
+
+#social-media-bar {
+	width: 										100%;
+	text-align: 							center;
+}
+
+/* 03	Desktop CSS 	*/
+@media only screen and (min-width: 960px) {
+
+	#toggleMobile label,
+	#toggleMobile input {
+		display: none;
+	}
+
+	input[type=checkbox]:checked ~ label ~ #menu-container { 
+	  opacity: 100;
+	  height: auto;
+	  display: block;
+	}
+
+	#social-media-bar {
+		text-align: 							right;
+	}
+	ul.sub-menu li {
+		margin-left:							30px;
+		display: 									none;
+	}	
+
+	ul.sub-menu li a {
+		padding-left:							.3em;
+	}	
+
+	ul.menu a {
+		padding:									8px 0 6px 6px;
+		display:									block;
+		height:										30px;
+		text-align:								left;
+		text-decoration:					none;
+		font-weight: 							bold;
+	}
+
+	ul.menu li {
+		list-style-type:					none;
+		padding-bottom:						-1px;
+		width:										130px;
+		margin-top:								3px;
+		margin-bottom:						5px;
+	}
+
+  #frame {
+		background-color: 			#EF8846;
+		width:									960px;
+		margin-left:						auto;
+		margin-right:						auto;
+		height:									auto;
+		border:									1px solid #666666;
+	} 
+
+	#header {
+		height:									150px;
+		background-repeat: 			no-repeat;
+		background-position: 		right center;
+		background-size: 				auto;
+	}
+
+	#menubar {
+		width:										100%;
+		height: 									80px;
+		background-color:					#CCCCCC;
+	}
+
+	#innerMenubar {
+		padding:									20px;
+		float: 										right;
+	}
+
+	#innerMenubar ul {
+		width: 										100%;
+		float: 										right;
+		font-size: 								14px;
+		height:										34px; /* ohne height verschwindet UL im float-Nirwana der LIs*/
+		margin:										0; 		/* entfernt die Listen-typische Einrückung beim IE */
+		padding:									0; 		/* entfernt die Listen-typische Einrückung beim Firefox */
+	}
+
+	#innerMenubar li {
+		float:										left;
+		list-style-type:					none;
+		margin-right:							1em;
+		padding-bottom:						-1px;
+		min-width:								90px;
+		max-width:								120px;
+		height:										34px;
+	}
+
+	#sidebar {
+		width:										200px;
+		float:										left;
+	}
+
+	#innerSidebar {
+		padding-top:							30px;
+		padding-left: 						25px;
+		padding-bottom:						20px;
+	}
+
+	#center {
+		width:										760px;
+		float:										right;
+		background-color:					white;
+	}
+
+	#innerCenter  {
+	  padding:									20px 60px 20px 60px;
+		font-size: 								14px;
+		line-height: 							18px;
+		font-weight: 							bold;
+		text-align: 							left;
+	}
+}
+
+/* UNUSED
 ul#untermenueins {
 	background-color:#EF8846;
 	font:14px Verdana;
@@ -127,9 +449,6 @@ ul#untermenueins {
 
 #untermenueins li {
 	margin-left:30px;
-}	
-
-p {
 }
 
 #rechtespalte a {
@@ -138,40 +457,7 @@ p {
 	text-decoration: underline;
 }
 
-li.aktiv {
-}
 
-li.aktiv a {
-	background-color:#535353;
-}
-
-ul a {
-	padding:8px 0 6px 6px;
-	display:block;
-	height:30px;
-	text-align:left;
-	text-decoration:none;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-}
-
-a:link {
-	background-color:#999999; color:#FFFFFF;
-}
-a:visited {
-	background-color: #999999; color:#FFFFFF;
-}
-a:focus {
-	background-color: #EF8846; color:#FFFFFF;
-}
-a:hover {
-	background-color: #EF8846; color:#FFFFFF;
-}
-a:active {
-	background-color: #666666; color:#FFFFFF;
-}
-
-/*---------untermenu zwei - aktuell--------------------*/  
 #untermenuzwei {
 } 
 
@@ -187,9 +473,6 @@ a:active {
 	margin-left:30px;
 }	
 
-p {
-}
-
 #rechtespalte a {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #000066;
@@ -202,177 +485,14 @@ li.aktiv {
 li.aktiv a {
 	background-color:#535353;
 }
-
-/*---------rechte Spalte--------------------*/
-#mittlerespalte {
-	width:760px;
-	float:right;
-	background-color:white;
-}
-
-/*---------rechts innen--------------------*/
-#innerespalte  {
-  padding:20px 60px 20px 60px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	line-height: 18px;
-	font-weight: bold;
-	color: #666666;
-	text-align: left;
-}
-
-/*---------Fuß--------------------*/
-#fuss {
-  clear:both;
-  width:100%;
-}
-
-/*---------Fuß innen--------------------*/
-#fussinnen {
-	padding:20px;
-}
-
-h1 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 17px;
-	font-weight: bold;
-	padding: 0px 0px 15px;
-}
-
-h4{
-	font-family: Verdana, Geneva, sans-serif; font-size:11px;
-}
-
-h5 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 9px;
-	font-style: normal;
-	color: #666666;
-}
-
-#innerespalte a:link {
-	color: #000099;
-	text-decoration: underline;
-	background-color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-
-#innerespalte a:visited {
-	color: #000066;
-	text-decoration: underline;
-	background-color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-
-#innerespalte a:focus {
-	color: #000066;
-	text-decoration: underline;
-	background-color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-
-#innerespalte a:hover {
-	color: #000066;
-	text-decoration: underline;
-	background-color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-
-#innerespalte a:active {
-	color: #000066;
-	text-decoration: underline;
-	background-color: #FFFFFF;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-
-h2 {
-	font-size: 17px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-}
-
-ul.sub-menu li {
-	margin-left:30px;
-	display: none;
-}	
+*/
 
 
-/* CSS Adjustments */
- 
-li.current_page_item ul.sub-menu li,
-.current_page_item ~ li, 
-.current-menu-item ~ li,
-.current_page_item,
-.current-menu-item {
-	display: block!important;
-}
-
-.current-page-ancestor ul.sub-menu li, 
-.current-menu-ancestor ul.sub-menu li, 
-.current-menu-parent ul.sub-menu li,
-.current-page-parent ul.sub-menu li {
-	display: block!important;	
-} 
-
-#innerespalte img {
-	max-width: 100%;
-	height: auto;
-}
-
-#social-media-bar {
-	width: 100%;
-	text-align: right;
-	font-size: 1.25em;
-}
-
-#social-media-bar a {
-	background-color: transparent;
-	margin-left: 1em;
-}
-
-#social-media-bar a {
-	background-color: transparent;
-	margin-left: 1em;
-}
 
 
-/* Style the list */
-ul#main-breadcrumb {
-    padding: 10px 16px!important;
-    list-style: none!important;
-    background-color: #eee!important;
-    width: 100%!important;
-}
 
-/* Display list items side by side */
-ul#main-breadcrumb li {
-    display: inline!important;
-    font-size: 18px!important;
-}
 
-/* Add a slash symbol (/) before/behind each list item */
-ul#main-breadcrumb li+li:before {
-    padding: 8px!important;
-    color: black!important;
-    content: "/\00a0"!important;
-}
 
-/* Add a color to all links inside the list */
-ul#main-breadcrumb li a {
-    color: #0275d8!important;
-    text-decoration: none!important;
-}
-
-/* Add a color on mouse-over */
-ul#main-breadcrumb li a:hover {
-    color: #01447e!important;
-    text-decoration: underline!important;
-}
 
 
 

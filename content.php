@@ -1,13 +1,10 @@
-<h5>Sie befinden sich hier: > Home</h5>
-<?php custom_breadcrumbs2(); ?>
-
 <h1><?php the_title(); ?></h1>
 
 <?php insert_featured_image_if_set() ?>
 
 <?php the_content(); ?>
 
-<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
+<!-- <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p> -->
 
 
 <?php
