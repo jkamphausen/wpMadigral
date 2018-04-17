@@ -143,44 +143,6 @@ ul#main-breadcrumb li a:hover {
 	background-size: 					100% auto;
 }
 
-/* UNUSED
-#innerHeader {
-	background-attachment: 		fixed;
-	background-repeat: 				no-repeat;
-	background-position: 			center top;
-	padding:									20px;
-	float: 										left;
-}
-*/
-
-/*
-#menubar {
-	width:										100%;
-	background-color:					#CCCCCC;
-}
-
-#innerMenubar {
-	padding:									.5em;
-}
-
-#innerMenubar ul {
-	width: 										100%;
-	height: 									auto;
-	list-style: 							none;
-  display: 									inline;
-	width: 										100%;
-	font-size: 								14px;
-	height:										34px; 
-	margin:										0; 		
-	padding:									0; 		
-	background-color:					#CCCCCC;
-}
-
-#innerMenubar li {
-	float: left;
-}
-*/
-
 #toggleMobile {
 	color: 										white;
 	text-align: 							center;
@@ -207,40 +169,6 @@ input[type=checkbox]:checked ~ label ~ #menu-container {
 }
 #toggleMobile input[type='checkbox'] {
     display:none;
-}
-
-/*
-
-input.faChkSqr {
-  visibility: hidden;
-  background-color: 		#EF8846;
-}
-
-input.faChkSqr:checked:after, input.faChkSqr:after {
-  visibility: visible;
-  font-family: FontAwesome;
-  font-size:25px;height: 17px; width: 17px;
-  position: relative;
-  top: -.5em;
-  left: -.2em;
-  background-color:#FFF;
-  display: inline-block;
-}
-
-input.faChkSqr:checked:after {
-  content: '\f00d';
-}
-
-input.faChkSqr:after {
-  content: '\f0c9';
-}
-
-input#menuToggleBox:checked:after {
-  content: '\f00d';
-}
-
-input#menuToggleBox:after {
-  content: '\f0c9';
 }
 
 */
@@ -275,8 +203,14 @@ input#menuToggleBox:after {
 }
 
 #innerCenter img {
+	position: 								relative;
 	max-width: 								100%;
 	height: 									auto;
+	margin: 									-1em;
+}
+
+img {
+	max-width: 								100%!important;
 }
 
 #footer {
@@ -438,58 +372,9 @@ ul.sub-menu li a {
 	}
 }
 
-/* UNUSED
-ul#untermenueins {
-	background-color:#EF8846;
-	font:14px Verdana;
-	margin:0;
-	margin-top:5px;
-	padding:0;
+div.wp-caption {
+	width: auto!important;
 }
-
-#untermenueins li {
-	margin-left:30px;
-}
-
-#rechtespalte a {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #000066;
-	text-decoration: underline;
-}
-
-
-#untermenuzwei {
-} 
-
-#untermenuzwei {
-	background-color:#EF8846;
-	font:14px Verdana;
-	margin:0;
-	margin-top:5px;
-	padding:0;
-}
-
-#untermenuzwei li {
-	margin-left:30px;
-}	
-
-#rechtespalte a {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #000066;
-	text-decoration: underline;
-}
-
-li.aktiv {
-}
-
-li.aktiv a {
-	background-color:#535353;
-}
-*/
-
-
-
-
 
 
 
